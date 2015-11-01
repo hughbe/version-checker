@@ -41,13 +41,13 @@ try
     
     if (!versionChecker.UpToDate)
     {
-	var latestVersion = versionChecker.LatestVersion;
+        var latestVersion = versionChecker.LatestVersion;
 
-	var versionId = latestVersion.Id;
-	var releaseDate = latestVersion.Date;
-	var releaseNotes = latestVersion.Notes;
-	var urls = latestVersion.Urls;
-	//...
+        var versionId = latestVersion.Id;
+        var releaseDate = latestVersion.Date;
+        var releaseNotes = latestVersion.Notes;
+        var urls = latestVersion.Urls;
+        //...
      }
 }
 catch (Exception)
