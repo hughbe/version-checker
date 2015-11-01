@@ -1,10 +1,10 @@
 {
     "version": "1.0.0-*",
-    "description": "VersionChecker Class Library",
-    "authors": [ "Hugh" ],
-    "tags": [ "" ],
-    "projectUrl": "",
-    "licenseUrl": "",
+    "description": "VersionChecker",
+    "authors": [ "Hugh Bellamy" ],
+    "tags": [ "version version-checker versioning" ],
+    "projectUrl": "https://github.com/hughbe/version-checker",
+    "licenseUrl": "https://github.com/hughbe/version-checker/blob/master/LICENSE",
 
     "dependencies": {
         "System.Collections": "4.0.10",
