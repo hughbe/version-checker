@@ -12,29 +12,51 @@ namespace VersionCheckerTests
         {
             var version = new ApplicationVersion("1.1.0.1");
             Assert.Equal(version.Id, "1.1.0.1");
+
+            Assert.Equal(version.ShortDescription, null);
+            Assert.Equal(version.LongDescription, null);
+
             Assert.Equal(version.Date, DateTime.MinValue);
+
             Assert.Equal(version.Notes, null);
             Assert.Equal(version.Urls, null);
+
+            Assert.Equal(version.Copyright, null);
         }
 
         [Fact]
         public void Version_Constructor_Test_2()
         {
+            var versionId = "1.1.0.1";
+
+            var shortDescription = "ShortDescription";
+            var longDescription = "ShortDescription";
+
+            var date = DateTime.Now;
+
             var notes = new VersionNotesCollection();
             notes.Add(new VersionNote("Test", "Hi"));
 
             var urls = new VersionUrlCollection();
             urls.Add(new VersionUrl("Test", "Hi"));
 
-            var version = new ApplicationVersion("1.1.0.1", DateTime.Now, notes, urls);
-            Assert.Equal(version.Id, "1.1.0.1");
-            Assert.Equal(version.Date, DateTime.Now);
+            var copyright = "(C) Hugh Bellamy 2015";
+
+            var version = new ApplicationVersion(versionId,  shortDescription, longDescription, date, notes, urls, copyright);
+            Assert.Equal(version.Id, versionId);
+
+            Assert.Equal(version.ShortDescription, shortDescription);
+            Assert.Equal(version.LongDescription, longDescription);
+
+            Assert.Equal(version.Date, date);
 
             Assert.Equal(version.Notes, notes);
             Assert.Equal(version.Notes.Count, notes.Count);
 
             Assert.Equal(version.Urls, urls);
             Assert.Equal(version.Urls.Count, urls.Count);
+
+            Assert.Equal(version.Copyright, copyright);
         }
 
         [Fact]
@@ -72,10 +94,38 @@ namespace VersionCheckerTests
         [Fact]
         public void Version_Id_Serialization_Error_Test_1()
         {
-            Assert.Throws<ArgumentNullException>(() =>               ApplicationVersion.FromXml(null));
+            Assert.Throws<ArgumentNullException>(() => ApplicationVersion.FromXml(null));
             Assert.Throws<ArgumentException>(() => ApplicationVersion.FromXml(""));
 
             Assert.Throws<XmlException>(() => ApplicationVersion.FromXml("aasdsdasads"));
+        }
+
+        [Fact]
+        public void Version_Short_Description_Serialization_Deserialization_Test()
+        {
+            var inputXml =
+@"<Version>
+  <Id>1.1.0.0</Id>
+  <ShortDescription>Hi</ShortDescription>
+</Version>";
+            var version = ApplicationVersion.FromXml(inputXml);
+            var outputXml = version.ToXml();
+
+            Assert.Equal(inputXml, outputXml);
+        }
+
+        [Fact]
+        public void Version_Long_Description_Serialization_Deserialization_Test()
+        {
+            var inputXml =
+@"<Version>
+  <Id>1.1.0.0</Id>
+  <LongDescription>Hi</LongDescription>
+</Version>";
+            var version = ApplicationVersion.FromXml(inputXml);
+            var outputXml = version.ToXml();
+
+            Assert.Equal(inputXml, outputXml);
         }
 
         [Fact]
@@ -296,6 +346,20 @@ namespace VersionCheckerTests
       <Url>Test</Url>
     </Url>
   </Urls>
+</Version>";
+            var version = ApplicationVersion.FromXml(inputXml);
+            var outputXml = version.ToXml();
+
+            Assert.Equal(inputXml, outputXml);
+        }
+
+        [Fact]
+        public void Version_Copyright_Serialization_Deserialization_Test()
+        {
+            var inputXml =
+@"<Version>
+  <Id>1.1.0.0</Id>
+  <Copyright>Copyright</Copyright>
 </Version>";
             var version = ApplicationVersion.FromXml(inputXml);
             var outputXml = version.ToXml();

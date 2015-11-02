@@ -1,6 +1,7 @@
 {
     "version": "1.0.0-*",
-    "description": "VersionChecker",
+    "title": "VersionChecker",
+    "description": "A simple but powerful library that simplifies version checking on the .Net platform",
     "summary": "A simple but powerful library that simplifies version checking on the .Net platform",
     "authors": [ "Hugh Bellamy" ],
     "tags": [ "version version-checker versioning" ],

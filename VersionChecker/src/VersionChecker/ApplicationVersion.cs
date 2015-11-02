@@ -6,25 +6,38 @@ namespace VersionChecker
 {
     public class ApplicationVersion : IEquatable<ApplicationVersion>
     {
-        public ApplicationVersion(string id) : this(id, DateTime.MinValue, null, null)
+        public ApplicationVersion(string id) : this(id, null, null,DateTime.MinValue, null, null, null)
         {
         }
 
-        public ApplicationVersion(string id, DateTime date, VersionNotesCollection notes, VersionUrlCollection urls)
+        public ApplicationVersion(string id, string shortDescription, string longDescription, DateTime date, VersionNotesCollection notes, VersionUrlCollection urls, string copyright)
         {
             Utilities.CheckStringParam(id, "The version id cannot be empty", nameof(id));
 
             Id = StandardizedString(id);
+
+            ShortDescription = shortDescription;
+            LongDescription = longDescription;
+
             Date = date;
+
             Notes = notes;
             Urls = urls;
+
+            Copyright = copyright;
         }
         
         public string Id { get; set; }
+
+        public string ShortDescription { get; set; }
+        public string LongDescription { get; set; }
+
         public DateTime Date { get; set; }
 
         public VersionNotesCollection Notes { get; set; }
         public VersionUrlCollection Urls { get; set; }
+
+        public string Copyright { get; set; }
 
         private static string StandardizedString(string original)
         {
@@ -41,6 +54,16 @@ namespace VersionChecker
 
             container.Add(new XElement("Id", Id));
 
+            if (ShortDescription != null)
+            {
+                container.Add(new XElement("ShortDescription", ShortDescription));
+            }
+
+            if (LongDescription != null)
+            {
+                container.Add(new XElement("LongDescription", LongDescription));
+            }
+
             if (Date != DateTime.MinValue)
             {
                 var dateString = Date.Day + "/" + Date.Month + "/" + Date.Year + " " + Date.Hour + ":" + Date.Minute + ":" + Date.Second;
@@ -49,6 +72,11 @@ namespace VersionChecker
 
             SerializeCollection(Notes, container);
             SerializeCollection(Urls, container);
+
+            if (Copyright != null)
+            {
+                container.Add(new XElement("Copyright", Copyright));
+            }
             
             return document;
         }
@@ -85,10 +113,15 @@ namespace VersionChecker
                 date = Convert.ToDateTime(dateString);
             }
 
+            var shortDescription = info.Element("ShortDescription")?.Value;
+            var longDescription = info.Element("LongDescription")?.Value;
+
             var versionNotes = new VersionNotesCollection(info);
             var versionUrls = new VersionUrlCollection(info);
+
+            var copyright = info.Element("Copyright")?.Value;
             
-            return new ApplicationVersion(id, date, versionNotes, versionUrls);
+            return new ApplicationVersion(id, shortDescription, longDescription, date, versionNotes, versionUrls, copyright);
         }
 
         public bool Equals(ApplicationVersion other)
