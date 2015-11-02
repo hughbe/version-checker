@@ -1,8 +1,10 @@
 {
     "version": "1.0.0-*",
     "description": "VersionChecker",
+    "summary": "A simple but powerful library that simplifies version checking on the .Net platform",
     "authors": [ "Hugh Bellamy" ],
     "tags": [ "version version-checker versioning" ],
+    "copyright": "Hugh Bellamy 2015",
     "projectUrl": "https://github.com/hughbe/version-checker",
     "licenseUrl": "https://github.com/hughbe/version-checker/blob/master/LICENSE",
 
