@@ -16,7 +16,8 @@
         "System.Runtime": "4.0.20",
         "System.Xml.XDocument": "4.0.10",
         "System.Net.Http": "4.0.0",
-        "System.IO.FileSystem": "4.0.0"
+        "System.IO.FileSystem": "4.0.0",
+        "Xml.Net": "1.0.0"
     },
 
     "frameworks": {

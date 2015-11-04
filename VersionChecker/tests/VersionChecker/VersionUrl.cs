@@ -1,10 +1,9 @@
-﻿using System;
-using Xml.Net;
+﻿using Xml.Net;
 
 namespace VersionChecker
 {
     [XmlConvertCustomElement("Note")]
-    public class VersionUrl : IEquatable<VersionUrl>
+    public class VersionUrl
     {
         public VersionUrl()
         {
@@ -40,23 +39,6 @@ namespace VersionChecker
                 Utilities.CheckStringParam(value, SR.VersionUrlEmpty, nameof(value));
                 _url = value;
             }
-        }
-
-        public override bool Equals(object obj)
-        {
-            return Equals(obj as VersionUrl);
-        }
-
-        public bool Equals(VersionUrl other)
-        {
-            if (other == null) { return false; }
-
-            return Title == other.Title && Url == other.Url;
-        }
-
-        public override int GetHashCode()
-        {
-            return Title.GetHashCode() ^ Url.GetHashCode();
         }
     }
 }

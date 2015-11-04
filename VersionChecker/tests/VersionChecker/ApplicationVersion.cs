@@ -40,7 +40,10 @@ namespace VersionChecker
 
         public DateTime Date { get; set; }
 
+        [XmlConvertElementsName("Note")]
         public Collection<VersionNote> Notes { get; set; }
+
+        [XmlConvertElementsName("Url")]
         public Collection<VersionUrl> Urls { get; set; }
 
         public string Copyright { get; set; }

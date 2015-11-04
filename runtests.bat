@@ -1,7 +1,7 @@
 
 set "test_utils_path=C:\Users\Hugh\Documents\Jenkins-Addons"
 
-set "test_relative_path=\VersionChecker\VersionCheckerTests\bin\Debug\VersionCheckerTests.dll"
+set "test_relative_path=\VersionChecker\artifacts\bin\VersionCheckerTests\Debug\dotnet\VersionCheckerTests.dll"
 set "source_relative_path=\VersionChecker\src\VersionChecker"
 
 set "current_path=%cd%"

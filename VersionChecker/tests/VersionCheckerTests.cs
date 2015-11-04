@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using VersionChecker;
 using Xunit;
 
-namespace VersionCheckerTests
+namespace VersionChecker.Tests
 {
     public class VersionCheckerTests
     {
