@@ -5,7 +5,7 @@ using Xunit;
 
 namespace VersionCheckerTests
 {
-    public partial class Tests
+    public class VersionTests
     {
         [Fact]
         public void Version_Constructor_Test_1()

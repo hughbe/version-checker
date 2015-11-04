@@ -5,7 +5,7 @@ using Xunit;
 
 namespace VersionCheckerTests
 {
-    public partial class Tests
+    public class VersionCheckerTests
     {
         public static string VersionsLocation { get; } = "https://raw.githubusercontent.com/hughbe/version-checker/master/resources/versions";
 
