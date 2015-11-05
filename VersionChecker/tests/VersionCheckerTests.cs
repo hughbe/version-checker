@@ -88,5 +88,17 @@ namespace VersionChecker.Tests
 
             await Assert.ThrowsAsync<HttpRequestException>(async () => await versionChecker.UpdateLatestVersion());
         }
+
+        [Fact]
+        public void Utilities_Check_Parameter_Test()
+        {
+            Assert.Throws<ArgumentNullException>(() => Utilities.CheckParameter(null, "paramName"));
+            Assert.Throws<ArgumentNullException>(() => Utilities.CheckStringParam(null, "description", "paramName"));
+            Assert.Throws<ArgumentException>(() => Utilities.CheckStringParam("", "description", "paramName"));
+
+            Assert.Null(Record.Exception(() => Utilities.CheckParameter("aString", "paramName")));
+            Assert.Null(Record.Exception(() => Utilities.CheckStringParam("aString", "description", "paramName")));
+        }
+
     }
 }

@@ -371,9 +371,7 @@ namespace VersionChecker.Tests
             var url3 = new VersionUrl("ATitle", "Url");
 
             var url4 = new VersionUrl("Title", "AUrl");
-
-            VersionUrl note5 = null;
-
+            
             Assert.True(url1.Equals(url2));
             Assert.True(url1.GetHashCode().Equals(url2.GetHashCode()));
 
@@ -382,7 +380,7 @@ namespace VersionChecker.Tests
 
             Assert.False(url1.Equals(url3));
             Assert.False(url1.Equals(url4));
-            Assert.False(url1.Equals(note5));
+            Assert.False(url1.Equals(null));
         }
 
         [Fact]
@@ -413,9 +411,7 @@ namespace VersionChecker.Tests
             var note3 = new VersionNote("ATitle", "Content");
 
             var note4 = new VersionNote("Title", "AContent");
-
-            VersionNote note5 = null;
-
+            
             Assert.True(note1.Equals(note2));
             Assert.True(note1.GetHashCode().Equals(note2.GetHashCode()));
 
@@ -424,7 +420,7 @@ namespace VersionChecker.Tests
 
             Assert.False(note1.Equals(note3));
             Assert.False(note1.Equals(note4));
-            Assert.False(note1.Equals(note5));
+            Assert.False(note1.Equals(null));
         }
     }
 }
