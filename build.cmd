@@ -4,7 +4,7 @@ set "msbuildpath=C:\Program Files (x86)\MSBuild\14.0\Bin"
 
 set "projpath=\VersionChecker\VersionChecker.sln"
 
-set "curpath=C:\Users\Hugh\Documents\GitHub\version-checker"
+set "curpath=%cd%"
 set "fullpath=%curpath%%projpath%"
 
 cd %msbuildpath%
