@@ -16,8 +16,8 @@ set "opencover_path=%test_utils_path%\OpenCover\"
 set "converter_path=%test_utils_path%\ReportConverter\"
 set "generator_path=%test_utils_path%\ReportGenerator\"
 
-set "xunit_coverage_path=%test_utils_path%\coverage.xunit.xml"
-set "cobertura_coverage_path=%test_utils_path%\coverage.cobertura.xml"
+set "xunit_coverage_path=%current_path%\coverage.xunit.xml"
+set "cobertura_coverage_path=%current_path%\coverage.cobertura.xml"
 
 set "bin_path=%test_utils_path%\Bin\"
 
