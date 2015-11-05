@@ -9,7 +9,7 @@ set "fullpath=%curpath%%projpath%"
 
 cd %msbuildpath%
 
-msbuild %fullpath% /nologo /maxcpucount /verbosity:minimal /nodeReuse:false
+msbuild "%fullpath%" /nologo /maxcpucount /verbosity:minimal /nodeReuse:false
 
 cd %curpath%
 
