@@ -23,7 +23,7 @@
       <Classes />
     </Module>
     <Module skippedDueTo="MissingPdb" hash="2C-BE-1B-C3-02-35-ED-A0-CC-7C-AB-BA-F1-C5-8D-DE-79-03-01-9A">
-      <FullName>C:\Users\Hugh\AppData\Local\Temp\7e1e6f00-c68d-4829-8d87-ea3f4063fec7\7e1e6f00-c68d-4829-8d87-ea3f4063fec7\assembly\dl3\6c5e8080\0aa65a19_3017d101\xunit.runner.utility.desktop.dll</FullName>
+      <FullName>C:\Users\Hugh\AppData\Local\Temp\08c3bf66-8bd8-4636-96f4-9ce2977dbf54\08c3bf66-8bd8-4636-96f4-9ce2977dbf54\assembly\dl3\e9e47b17\0aa65a19_3017d101\xunit.runner.utility.desktop.dll</FullName>
       <ModuleName>xunit.runner.utility.desktop</ModuleName>
       <Classes />
     </Module>
@@ -2138,19 +2138,19 @@
     </Module>
     <Module hash="51-60-07-3A-41-C0-01-C6-0C-80-56-7D-83-63-89-31-36-5F-A9-FE">
       <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
-      <FullName>C:\Users\Hugh\AppData\Local\Temp\5e0e8ae0-4a09-40df-9dd1-eb7d373fb5cf\5e0e8ae0-4a09-40df-9dd1-eb7d373fb5cf\assembly\dl3\2a0254af\23744834_e414d101\xunit.execution.desktop.dll</FullName>
+      <FullName>C:\Users\Hugh\AppData\Local\Temp\2fbd5a20-c364-4c71-b0e9-13189e37f8c6\2fbd5a20-c364-4c71-b0e9-13189e37f8c6\assembly\dl3\55b5ba88\23744834_e414d101\xunit.execution.desktop.dll</FullName>
       <ModuleName>xunit.execution.desktop</ModuleName>
       <Files />
       <Classes />
     </Module>
     <Module skippedDueTo="MissingPdb" hash="9E-A9-5D-7F-86-82-4D-02-7D-07-AD-C0-17-06-5D-73-8F-1F-28-44">
-      <FullName>C:\Users\Hugh\AppData\Local\Temp\5e0e8ae0-4a09-40df-9dd1-eb7d373fb5cf\5e0e8ae0-4a09-40df-9dd1-eb7d373fb5cf\assembly\dl3\6f95c56e\8b48392a_e414d101\xunit.abstractions.dll</FullName>
+      <FullName>C:\Users\Hugh\AppData\Local\Temp\2fbd5a20-c364-4c71-b0e9-13189e37f8c6\2fbd5a20-c364-4c71-b0e9-13189e37f8c6\assembly\dl3\d8a43b68\8b48392a_e414d101\xunit.abstractions.dll</FullName>
       <ModuleName>xunit.abstractions</ModuleName>
       <Classes />
     </Module>
     <Module hash="74-29-64-7E-64-BA-4A-1F-13-72-4F-A5-14-02-34-2B-0C-F0-E5-BB">
       <Summary numSequencePoints="480" visitedSequencePoints="478" numBranchPoints="151" visitedBranchPoints="149" sequenceCoverage="99.58" branchCoverage="98.68" maxCyclomaticComplexity="6" minCyclomaticComplexity="1" visitedClasses="20" numClasses="20" visitedMethods="119" numMethods="119" />
-      <FullName>C:\Users\Hugh\AppData\Local\Temp\5e0e8ae0-4a09-40df-9dd1-eb7d373fb5cf\5e0e8ae0-4a09-40df-9dd1-eb7d373fb5cf\assembly\dl3\1a354b22\b82e91c6_6117d101\VersionCheckerTests.dll</FullName>
+      <FullName>C:\Users\Hugh\AppData\Local\Temp\2fbd5a20-c364-4c71-b0e9-13189e37f8c6\2fbd5a20-c364-4c71-b0e9-13189e37f8c6\assembly\dl3\c0b0b37e\b82e91c6_6117d101\VersionCheckerTests.dll</FullName>
       <ModuleName>VersionCheckerTests</ModuleName>
       <Files>
         <File uid="41" fullPath="C:\Users\Hugh\Documents\GitHub\version-checker\VersionChecker\src\VersionChecker\ApplicationVersion.cs" />
@@ -4253,27 +4253,27 @@
       </Classes>
     </Module>
     <Module skippedDueTo="MissingPdb" hash="2C-BE-1B-C3-02-35-ED-A0-CC-7C-AB-BA-F1-C5-8D-DE-79-03-01-9A">
-      <FullName>C:\Users\Hugh\AppData\Local\Temp\5e0e8ae0-4a09-40df-9dd1-eb7d373fb5cf\5e0e8ae0-4a09-40df-9dd1-eb7d373fb5cf\assembly\dl3\3e8e4421\3aa43c2a_e414d101\xunit.runner.utility.desktop.dll</FullName>
+      <FullName>C:\Users\Hugh\AppData\Local\Temp\2fbd5a20-c364-4c71-b0e9-13189e37f8c6\2fbd5a20-c364-4c71-b0e9-13189e37f8c6\assembly\dl3\f1ba7524\3aa43c2a_e414d101\xunit.runner.utility.desktop.dll</FullName>
       <ModuleName>xunit.runner.utility.desktop</ModuleName>
       <Classes />
     </Module>
     <Module hash="9F-06-B1-CA-CB-A0-C1-4D-45-F5-AA-8F-72-C0-DF-0F-F4-EF-29-CF">
       <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
-      <FullName>C:\Users\Hugh\AppData\Local\Temp\5e0e8ae0-4a09-40df-9dd1-eb7d373fb5cf\5e0e8ae0-4a09-40df-9dd1-eb7d373fb5cf\assembly\dl3\3c357ac7\76413032_e414d101\xunit.core.dll</FullName>
+      <FullName>C:\Users\Hugh\AppData\Local\Temp\2fbd5a20-c364-4c71-b0e9-13189e37f8c6\2fbd5a20-c364-4c71-b0e9-13189e37f8c6\assembly\dl3\ac5db5df\76413032_e414d101\xunit.core.dll</FullName>
       <ModuleName>xunit.core</ModuleName>
       <Files />
       <Classes />
     </Module>
     <Module hash="54-BF-ED-AD-F1-FB-16-3C-74-30-83-BB-55-CE-BB-58-D9-5D-0E-C9">
       <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
-      <FullName>C:\Users\Hugh\AppData\Local\Temp\5e0e8ae0-4a09-40df-9dd1-eb7d373fb5cf\5e0e8ae0-4a09-40df-9dd1-eb7d373fb5cf\assembly\dl3\8d824755\df7ded00_5617d101\Xml.Net.dll</FullName>
+      <FullName>C:\Users\Hugh\AppData\Local\Temp\2fbd5a20-c364-4c71-b0e9-13189e37f8c6\2fbd5a20-c364-4c71-b0e9-13189e37f8c6\assembly\dl3\2e30ff11\df7ded00_5617d101\Xml.Net.dll</FullName>
       <ModuleName>Xml.Net</ModuleName>
       <Files />
       <Classes />
     </Module>
     <Module hash="07-45-D5-E5-64-A5-50-1F-70-A0-AC-85-75-89-96-B5-69-A5-81-0F">
       <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
-      <FullName>C:\Users\Hugh\AppData\Local\Temp\5e0e8ae0-4a09-40df-9dd1-eb7d373fb5cf\5e0e8ae0-4a09-40df-9dd1-eb7d373fb5cf\assembly\dl3\18326c21\b2ad5a31_e414d101\xunit.assert.dll</FullName>
+      <FullName>C:\Users\Hugh\AppData\Local\Temp\2fbd5a20-c364-4c71-b0e9-13189e37f8c6\2fbd5a20-c364-4c71-b0e9-13189e37f8c6\assembly\dl3\47b369ce\b2ad5a31_e414d101\xunit.assert.dll</FullName>
       <ModuleName>xunit.assert</ModuleName>
       <Files />
       <Classes />

@@ -60,8 +60,6 @@ namespace VersionChecker
 
         public async Task<bool> IsUpToDate()
         {
-            if (LatestVersion == null && HasUpdatedLatestVersion) { throw new InvalidOperationException("Version checker could not get the latest version"); }
-
             if (!HasUpdatedLatestVersion) 
             {
                 await Task.Run(() => UpdateLatestVersion());
