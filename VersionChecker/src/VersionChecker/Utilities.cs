@@ -4,14 +4,8 @@ namespace VersionChecker
 {
     internal static class SR
     {
-        public static string VersionUrlMissing => "The version url \"Url\" tag is missing";
-        public static string VersionUrlTitleMissing => "The version url \"Title\" is missing";
-
         public static string VersionUrlEmpty => "The version url is empty";
         public static string VersionUrlTitleEmpty => "The version url title is empty";
-        
-        public static string VersionNoteTitleMissing => "The version note \"Title\" tag is missing";
-        public static string VersionNoteContentMissing => "The version note \"Content\" tag is missing";
 
         public static string VersionNoteTitleEmpty => "The version note title is empty";
         public static string VersionNoteContentEmpty => "The version note content is empty";

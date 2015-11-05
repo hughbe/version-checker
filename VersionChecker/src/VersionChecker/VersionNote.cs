@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Xml.Linq;
+using Xml.Net;
 
 namespace VersionChecker
 {
-    public class VersionNote : XmlConvertible
+    [XmlConvertCustomElement("Note")]
+    public class VersionNote : IEquatable<VersionNote>
     {
         public VersionNote()
         {
@@ -16,29 +17,6 @@ namespace VersionChecker
 
             Title = title;
             Content = content;
-        }
-
-        protected internal override XElement ToXElement()
-        {
-            var element = new XElement(XmlIdentifier);
-
-            element.Add(new XElement("Title", Title));
-            element.Add(new XElement("Content", Content));
-
-            return element;
-        }
-
-        protected internal override XmlConvertible FromXElement(XElement element)
-        {
-            Utilities.CheckParameter(element, nameof(element));
-
-            var title = element.Element("Title")?.Value;
-            var content = element.Element("Content")?.Value;
-
-            if (title == null) { throw new ArgumentException(SR.VersionNoteTitleMissing); }
-            if (content == null) { throw new ArgumentException(SR.VersionNoteContentMissing); }
-
-            return new VersionNote(title, content);
         }
 
         private string _title;
@@ -64,6 +42,21 @@ namespace VersionChecker
             }
         }
 
-        protected internal override string XmlIdentifier => "Note";
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as VersionNote);
+        }
+
+        public bool Equals(VersionNote other)
+        {
+            if (other == null) { return false; }
+
+            return Title == other.Title && Content == other.Content;
+        }
+
+        public override int GetHashCode()
+        {
+            return Title.GetHashCode() ^ Content.GetHashCode();
+        }
     }
 }
