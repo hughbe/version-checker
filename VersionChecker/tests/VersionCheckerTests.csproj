@@ -63,13 +63,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\src\VersionChecker\ApplicationVersion.cs">
+      <Link>VersionChecker\ApplicationVersion.cs</Link>
+    </Compile>
+    <Compile Include="..\src\VersionChecker\ApplicationVersionChecker.cs">
+      <Link>VersionChecker\ApplicationVersionChecker.cs</Link>
+    </Compile>
+    <Compile Include="..\src\VersionChecker\Utilities.cs">
+      <Link>VersionChecker\Utilities.cs</Link>
+    </Compile>
+    <Compile Include="..\src\VersionChecker\VersionNote.cs">
+      <Link>VersionChecker\VersionNote.cs</Link>
+    </Compile>
+    <Compile Include="..\src\VersionChecker\VersionUrl.cs">
+      <Link>VersionChecker\VersionUrl.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VersionCheckerTests.cs" />
-    <Compile Include="VersionChecker\ApplicationVersion.cs" />
-    <Compile Include="VersionChecker\ApplicationVersionChecker.cs" />
-    <Compile Include="VersionChecker\Utilities.cs" />
-    <Compile Include="VersionChecker\VersionNote.cs" />
-    <Compile Include="VersionChecker\VersionUrl.cs" />
     <Compile Include="VersionTests.cs" />
   </ItemGroup>
   <ItemGroup>

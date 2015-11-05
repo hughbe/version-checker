@@ -217,14 +217,7 @@ namespace VersionChecker.Tests
             var outputVersion = ApplicationVersion.FromXml(outputXml);
             
             Assert.Equal(inputVersion.Notes.Count, outputVersion.Notes.Count);
-
-            for (int i = 0; i < inputVersion.Notes.Count; i++)
-            {
-                var inputNote = inputVersion.Notes[i];
-                var outputNote = outputVersion.Notes[i];
-                Assert.True(inputNote.Title.Equals(outputNote.Title));
-                Assert.True(inputNote.Content.Equals(outputNote.Content));
-            }
+            Assert.Equal(inputVersion.Notes, outputVersion.Notes);
         }
 
         [Fact]
@@ -290,14 +283,7 @@ namespace VersionChecker.Tests
             var outputVersion = ApplicationVersion.FromXml(outputXml);
             
             Assert.Equal(inputVersion.Urls.Count, outputVersion.Urls.Count);
-
-            for(int i = 0; i < inputVersion.Urls.Count; i++)
-            {
-                var inputUrl = inputVersion.Urls[i];
-                var outputUrl = outputVersion.Urls[i];
-                Assert.True(inputUrl.Title.Equals(outputUrl.Title));
-                Assert.True(inputUrl.Url.Equals(outputUrl.Url));
-            }
+            Assert.Equal(inputVersion.Urls, outputVersion.Urls);
         }
 
         [Fact]
@@ -355,6 +341,90 @@ namespace VersionChecker.Tests
             var outputVersion = ApplicationVersion.FromXml(outputXml);
 
             Assert.Equal(inputVersion.Copyright, outputVersion.Copyright);
+        }
+
+        [Fact]
+        public void Version_Url_Constructor_Test()
+        {
+            var url = new VersionUrl("Title", "Url");
+
+            Assert.Equal(url.Title, "Title");
+            Assert.Equal(url.Url, "Url");
+        }
+
+        [Fact]
+        public void Version_Url_Invalid_Constructor_Test()
+        {
+            Assert.Throws<ArgumentNullException>(() => new VersionUrl(null, "Url"));
+            Assert.Throws<ArgumentException>(() => new VersionUrl("Title", ""));
+
+            Assert.Throws<ArgumentNullException>(() => new VersionUrl("Title", null));
+            Assert.Throws<ArgumentException>(() => new VersionUrl("", "Url"));
+        }
+
+        [Fact]
+        public void Version_Url_Equality_Test()
+        {
+            var url1 = new VersionUrl("Title", "Url");
+            var url2 = new VersionUrl("Title", "Url");
+            
+            var url3 = new VersionUrl("ATitle", "Url");
+
+            var url4 = new VersionUrl("Title", "AUrl");
+
+            VersionUrl note5 = null;
+
+            Assert.True(url1.Equals(url2));
+            Assert.True(url1.GetHashCode().Equals(url2.GetHashCode()));
+
+            Assert.True(url2.Equals(url1));
+            Assert.True(url2.GetHashCode().Equals(url1.GetHashCode()));
+
+            Assert.False(url1.Equals(url3));
+            Assert.False(url1.Equals(url4));
+            Assert.False(url1.Equals(note5));
+        }
+
+        [Fact]
+        public void Version_Note_Constructor_Test()
+        {
+            var note = new VersionNote("Title", "Content");
+
+            Assert.Equal(note.Title, "Title");
+            Assert.Equal(note.Content, "Content");
+        }
+
+        [Fact]
+        public void Version_Note_Invalid_Constructor_Test()
+        {
+            Assert.Throws<ArgumentNullException>(() => new VersionNote(null, "Content"));
+            Assert.Throws<ArgumentException>(() => new VersionNote("Title", ""));
+
+            Assert.Throws<ArgumentNullException>(() => new VersionNote("Title", null));
+            Assert.Throws<ArgumentException>(() => new VersionNote("", "Content"));
+        }
+
+        [Fact]
+        public void Version_Note_Equality_Test()
+        {
+            var note1 = new VersionNote("Title", "Content");
+            var note2 = new VersionNote("Title", "Content");
+
+            var note3 = new VersionNote("ATitle", "Content");
+
+            var note4 = new VersionNote("Title", "AContent");
+
+            VersionNote note5 = null;
+
+            Assert.True(note1.Equals(note2));
+            Assert.True(note1.GetHashCode().Equals(note2.GetHashCode()));
+
+            Assert.True(note2.Equals(note1));
+            Assert.True(note2.GetHashCode().Equals(note1.GetHashCode()));
+
+            Assert.False(note1.Equals(note3));
+            Assert.False(note1.Equals(note4));
+            Assert.False(note1.Equals(note5));
         }
     }
 }

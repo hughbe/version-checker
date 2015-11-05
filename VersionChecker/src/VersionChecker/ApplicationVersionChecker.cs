@@ -43,7 +43,7 @@ namespace VersionChecker
         private bool HasUpdatedLatestVersion { get; set; } = false;
         public async Task UpdateLatestVersion()
         {
-            LatestVersion = await GetVersion("currentversion");
+            LatestVersion = await GetVersion(CurrentVersionName);
             HasUpdatedLatestVersion = true;
         }
         
