@@ -246,3 +246,6 @@ Temporary Items
 Session.vim
 .netrwhist
 *~
+
+coverage.xunit.xml
+coverage.cobertura.xml

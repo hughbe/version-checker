@@ -5,7 +5,7 @@ set "target_directory_relative_path=\VersionChecker\tests\bin\Debug"
 set "test_relative_path=\VersionCheckerTests.dll"
 set "source_relative_path=\VersionChecker\src\VersionChecker"
 
-set "current_path=C:\Users\Hugh\Documents\GitHub\version-checker"
+set "current_path=%cd%"
 set "target_directory=%current_path%%target_directory_relative_path%"
 set "tests_full_path=%target_directory%%test_relative_path%"
 set "source_full_path=%current_path%%source_relative_path%"
