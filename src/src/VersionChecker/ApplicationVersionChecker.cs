@@ -23,28 +23,29 @@ namespace VersionChecker
 
         public string VersionsLocation { get; }
         
-        private string _currentVersionName = "currentversion";
-        public string CurrentVersionName
+        private string _latestVersionName = "latestversion";
+        public string LatestVersionName
         {
-            get { return _currentVersionName; }
+            get { return _latestVersionName; }
             set
             {
-                Utilities.CheckStringParam(value, SR.CurrentVersionNameEmpty, nameof(value));
+                Utilities.CheckStringParam(value, SR.LatestVersionNameEmpty, nameof(value));
 
-                _currentVersionName = value;
+                _latestVersionName = value;
             }
         }
 
-        public void ResetCurrentVersionName()
+        public void ResetLatestVersionName()
         {
-            CurrentVersionName = "currentversion";
+            LatestVersionName = "latestversion";
         }
         
-        private bool HasUpdatedLatestVersion { get; set; } = false;
-        public async Task UpdateLatestVersion()
+        public bool HasUpdatedLatestVersion { get; set; }
+        public async Task<ApplicationVersion> GetLatestVersion()
         {
-            LatestVersion = await GetVersion(CurrentVersionName);
+            var latestVersion = await GetVersion(LatestVersionName);
             HasUpdatedLatestVersion = true;
+            return latestVersion;
         }
         
         public async Task<ApplicationVersion> GetVersion(string versionId)
@@ -62,8 +63,9 @@ namespace VersionChecker
         {
             if (!HasUpdatedLatestVersion) 
             {
-                await Task.Run(() => UpdateLatestVersion());
+                LatestVersion = await Task.Run(GetLatestVersion);
             }
+
             return LatestVersion.Equals(CurrentVersion);
         }
     }

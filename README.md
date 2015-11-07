@@ -30,7 +30,7 @@ The format of versions is XML. An example is structured as follows (all but the 
 
 #Example Use
 1. Create a folder on a website of your choice and name it appropriately (e.g. "versions")
-2. Add a file titled 
+2. Add a file titled `latestversion.xml` with the format above
 ```csharp
 var versionsLocation = "...";
 var currentVersion = new ApplicationVersion("..."); //Version identifier (e.g. 1.1.0.0)

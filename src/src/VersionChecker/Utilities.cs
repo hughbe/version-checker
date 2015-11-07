@@ -10,7 +10,7 @@ namespace VersionChecker
         public static string VersionNoteTitleEmpty => "The version note title is empty";
         public static string VersionNoteContentEmpty => "The version note content is empty";
 
-        public static string CurrentVersionNameEmpty => "The current version name cannot be empty";
+        public static string LatestVersionNameEmpty => "The latest version name cannot be empty";
     }
 
     internal static class Utilities

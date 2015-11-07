@@ -16,7 +16,7 @@ namespace VersionChecker.Tests
         [Theory]
         [InlineData("1.1.0.1", "url")]
         [InlineData("2.3.4.5", "test")]
-        public void VersionChecker_Constructor_Test(string versionId, string versionsLocation)
+        public void Constructor_Test(string versionId, string versionsLocation)
         {
             var currentVersion = new ApplicationVersion(versionId);
             var versionChecker = new ApplicationVersionChecker(versionsLocation, currentVersion);
@@ -26,7 +26,7 @@ namespace VersionChecker.Tests
         }
 
         [Fact]
-        public void VersionChecker_Invalid_Constructor_Test()
+        public void Invalid_Constructor_Test()
         {
             Assert.Throws<ArgumentNullException>(() => new ApplicationVersionChecker(null, OnlineCurrentVersion));
             Assert.Throws<ArgumentException>(() => new ApplicationVersionChecker("", OnlineCurrentVersion));
@@ -37,28 +37,28 @@ namespace VersionChecker.Tests
         [Theory]
         [InlineData("current1")]
         [InlineData("current2")]
-        public void VersionChecker_Current_Version_Name_Test(string newCurrentName)
+        public void Current_Version_Name_Test(string newCurrentName)
         {
             var versionChecker = OnlineCurrentVersionChecker();
 
-            versionChecker.CurrentVersionName = newCurrentName;
-            Assert.True(versionChecker.CurrentVersionName == newCurrentName);
+            versionChecker.LatestVersionName = newCurrentName;
+            Assert.True(versionChecker.LatestVersionName == newCurrentName);
 
-            versionChecker.ResetCurrentVersionName();
-            Assert.Equal(versionChecker.CurrentVersionName, "currentversion");
+            versionChecker.ResetLatestVersionName();
+            Assert.Equal(versionChecker.LatestVersionName, "latestversion");
         }
 
         [Fact]
-        public void VersionChecker_Invalid_Current_Name_Test()
+        public void Invalid_Current_Name_Test()
         {
             var versionChecker = OnlineCurrentVersionChecker();
 
-            Assert.Throws<ArgumentNullException>(() => versionChecker.CurrentVersionName = null);
-            Assert.Throws<ArgumentException>(() => versionChecker.CurrentVersionName = "");
+            Assert.Throws<ArgumentNullException>(() => versionChecker.LatestVersionName = null);
+            Assert.Throws<ArgumentException>(() => versionChecker.LatestVersionName = "");
         }
 
         [Fact]
-        public async Task VersionChecker_Get_Current_Version_Test()
+        public async Task Get_Current_Version_Test()
         {
             var versionChecker = OnlineCurrentVersionChecker();
             
@@ -69,20 +69,16 @@ namespace VersionChecker.Tests
         }
 
         [Fact]
-        public async Task VersionChecker_Update_Latest_Version()
+        public async Task Update_Latest_Version()
         {
             var versionChecker = OnlineCurrentVersionChecker();
 
-            await versionChecker.UpdateLatestVersion();
-
-            var version = versionChecker.LatestVersion;
-            Assert.Equal(version, OnlineCurrentVersion);
-            
-            Assert.True(versionChecker.IsUpToDate().Result);
+            var latestVersion = await versionChecker.GetLatestVersion();
+            Assert.Equal(latestVersion, OnlineCurrentVersion);
         }
 
         [Fact]
-        public async Task VersionChecker_Get_Invalid_Version_Test()
+        public async Task Get_Invalid_Version_Test()
         {
             var versionChecker = new ApplicationVersionChecker(VersionsLocation, OnlineCurrentVersion);
 
@@ -93,7 +89,7 @@ namespace VersionChecker.Tests
         [Theory]
         [InlineData("1.1.0.0", true)]
         [InlineData("1.0.0.0", false)]
-        public async Task VersionChecker_Up_To_Date_Test(string input, bool expected)
+        public async Task Up_To_Date_Test(string input, bool expected)
         {
             var currentVersion = new ApplicationVersion(input);
             var versionChecker = new ApplicationVersionChecker(VersionsLocation, currentVersion);
@@ -103,12 +99,12 @@ namespace VersionChecker.Tests
         }
 
         [Fact]
-        public async Task VersionChecker_Invalid_Up_To_Date_Test()
+        public async Task Invalid_Up_To_Date_Test()
         {
             var versionChecker = new ApplicationVersionChecker(VersionsLocation, OnlineCurrentVersion);
-            versionChecker.CurrentVersionName = "invalid-data-torlalsdalladla";
+            versionChecker.LatestVersionName = "invalid-data-torlalsdalladla";
 
-            await Assert.ThrowsAsync<HttpRequestException>(async () => await versionChecker.UpdateLatestVersion());
+            await Assert.ThrowsAsync<HttpRequestException>(async () => await versionChecker.GetLatestVersion());
         }
     }
 }
