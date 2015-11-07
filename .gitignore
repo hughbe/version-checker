@@ -1,5 +1,9 @@
 syntax: glob
 
+### Tests ###
+coverage.xml
+resources/coverage
+
 ### VisualStudio ###
 
 # User-specific files

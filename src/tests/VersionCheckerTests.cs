@@ -62,7 +62,7 @@ namespace VersionChecker.Tests
         {
             var versionChecker = OnlineCurrentVersionChecker();
             
-            var version = await versionChecker.GetVersion("currentversion");
+            var version = await versionChecker.GetVersion("latestversion");
             Assert.Equal(version, OnlineCurrentVersion);
 
             Assert.True(versionChecker.IsUpToDate().Result);
