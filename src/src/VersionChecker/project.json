@@ -13,23 +13,23 @@
     "dotnet": {
       "dependencies": {
         "Xml.Net": "1.0.4",
-        "System.Collections": "4.0.11-beta-23409",
-        "System.Linq": "4.0.1-beta-23409",
-        "System.Threading": "4.0.11-beta-23409",
-        "System.Runtime": "4.0.21-beta-23409",
-        "System.IO.FileSystem": "4.0.1-beta-23409",
-        "System.Net.Http": "4.0.1-beta-23409"
+        "System.Collections": "4.0.11-beta-*",
+        "System.Linq": "4.0.1-beta-*",
+        "System.Threading": "4.0.11-beta-*",
+        "System.Runtime": "4.0.21-beta-*",
+        "System.IO.FileSystem": "4.0.1-beta-*",
+        "System.Net.Http": "4.0.1-beta-*"
       }
     },
     "aspnet50": {
       "dependencies": {
         "Xml.Net": "1.0.4",
-        "System.Collections": "4.0.11-beta-23409",
-        "System.Linq": "4.0.1-beta-23409",
-        "System.Threading": "4.0.11-beta-23409",
-        "System.Runtime": "4.0.21-beta-23409",
-        "System.IO.FileSystem": "4.0.1-beta-23409",
-        "System.Net.Http": "4.0.1-beta-23409"
+        "System.Collections": "4.0.11-beta-*",
+        "System.Linq": "4.0.1-beta-*",
+        "System.Threading": "4.0.11-beta-*",
+        "System.Runtime": "4.0.21-beta-*",
+        "System.IO.FileSystem": "4.0.1-beta-*",
+        "System.Net.Http": "4.0.1-beta-*"
       }
     },
     "dnx451": {

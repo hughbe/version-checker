@@ -15,6 +15,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5D47C72C-C468-43B8-BD31-1BFFC71EB29C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VersionChecker.Tests", "tests\VersionChecker.Tests.csproj", "{F06DFAB1-094C-4B27-B24B-E2EE002F4AC4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{469F6F49-B913-44BC-878C-8A07E5B09DFF} = {469F6F49-B913-44BC-878C-8A07E5B09DFF}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

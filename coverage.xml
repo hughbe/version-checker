@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+  <Modules>
+    <Module skippedDueTo="Filter" hash="39-D2-69-65-95-A6-5A-AC-36-21-BB-6C-67-68-D9-86-58-77-7C-ED">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_64\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll</FullName>
+      <ModuleName>mscorlib</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="C9-73-ED-04-00-C6-51-60-27-F2-A0-0B-90-05-B8-86-6E-DB-6B-00">
+      <FullName>C:\Users\Hugh\Documents\GitHub\version-checker\src\packages\xunit.runner.console.2.1.0\tools\xunit.console.exe</FullName>
+      <ModuleName>xunit.console</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="2C-BE-1B-C3-02-35-ED-A0-CC-7C-AB-BA-F1-C5-8D-DE-79-03-01-9A">
+      <FullName>C:\Users\Hugh\Documents\GitHub\version-checker\src\packages\xunit.runner.console.2.1.0\tools\xunit.runner.utility.desktop.dll</FullName>
+      <ModuleName>xunit.runner.utility.desktop</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="9E-A9-5D-7F-86-82-4D-02-7D-07-AD-C0-17-06-5D-73-8F-1F-28-44">
+      <FullName>C:\Users\Hugh\Documents\GitHub\version-checker\src\packages\xunit.runner.console.2.1.0\tools\xunit.abstractions.dll</FullName>
+      <ModuleName>xunit.abstractions</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="F2-AE-6A-FF-6D-90-B0-2D-DC-74-AD-F8-5A-48-B4-35-01-4D-5B-36">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</FullName>
+      <ModuleName>System.Core</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="AA-84-EA-4A-FD-23-17-44-E5-3B-73-2A-3D-B6-0E-17-EE-E1-53-6A">
+      <FullName>C:\Users\Hugh\Documents\GitHub\version-checker\src\packages\xunit.runner.console.2.1.0\tools\xunit.runner.reporters.desktop.dll</FullName>
+      <ModuleName>xunit.runner.reporters.desktop</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="6A-7F-8A-5C-DA-B6-D2-F2-03-3A-49-AB-0E-60-60-67-BA-38-A7-57">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Net.Http\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Net.Http.dll</FullName>
+      <ModuleName>System.Net.Http</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="56-78-FC-2A-D1-E9-92-34-51-52-EB-C3-D0-DC-F7-11-27-76-72-E4">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</FullName>
+      <ModuleName>System</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="37-B2-66-3F-ED-AF-B1-E7-E7-EF-22-68-87-6C-8D-E4-38-AD-9B-E8">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_64\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll</FullName>
+      <ModuleName>System.Web</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="35-E9-46-2A-74-7E-97-F3-30-6A-54-64-87-BC-30-0C-76-42-05-6B">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll</FullName>
+      <ModuleName>System.Configuration</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="75-21-73-F7-19-DB-C9-14-68-D8-F2-4C-82-EF-EA-8D-7F-C1-16-47">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll</FullName>
+      <ModuleName>System.Xml</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="BC-E7-A1-CB-53-F2-8B-70-A3-AF-F6-77-E3-8F-51-A7-98-F5-7F-55">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll</FullName>
+      <ModuleName>System.Xml.Linq</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="2C-BE-1B-C3-02-35-ED-A0-CC-7C-AB-BA-F1-C5-8D-DE-79-03-01-9A">
+      <FullName>C:\Users\Hugh\AppData\Local\Temp\09825fc8-c2da-428d-93af-97c7896b3032\09825fc8-c2da-428d-93af-97c7896b3032\assembly\dl3\4ce07bbd\05c35e00_4919d101\xunit.runner.utility.desktop.dll</FullName>
+      <ModuleName>xunit.runner.utility.desktop</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="F2-AE-6A-FF-6D-90-B0-2D-DC-74-AD-F8-5A-48-B4-35-01-4D-5B-36">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</FullName>
+      <ModuleName>System.Core</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="56-78-FC-2A-D1-E9-92-34-51-52-EB-C3-D0-DC-F7-11-27-76-72-E4">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</FullName>
+      <ModuleName>System</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="">
+      <FullName>RefEmit_InMemoryManifestModule</FullName>
+      <ModuleName>Anonymously Hosted DynamicMethods Assembly</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="84-F1-9D-D4-80-FD-FD-4B-FB-C9-D7-F5-29-8A-8C-DF-3F-AE-C3-5C">
+      <FullName>C:\Users\Hugh\Documents\GitHub\version-checker\src\tests\bin\debug\VersionChecker.Tests.dll</FullName>
+      <ModuleName>VersionChecker.Tests</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="6A-7F-8A-5C-DA-B6-D2-F2-03-3A-49-AB-0E-60-60-67-BA-38-A7-57">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Net.Http\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Net.Http.dll</FullName>
+      <ModuleName>System.Net.Http</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="51-60-07-3A-41-C0-01-C6-0C-80-56-7D-83-63-89-31-36-5F-A9-FE">
+      <FullName>C:\Users\Hugh\Documents\GitHub\version-checker\src\tests\bin\debug\xunit.execution.desktop.dll</FullName>
+      <ModuleName>xunit.execution.desktop</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="9E-A9-5D-7F-86-82-4D-02-7D-07-AD-C0-17-06-5D-73-8F-1F-28-44">
+      <FullName>C:\Users\Hugh\Documents\GitHub\version-checker\src\tests\bin\debug\xunit.abstractions.dll</FullName>
+      <ModuleName>xunit.abstractions</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="56-78-FC-2A-D1-E9-92-34-51-52-EB-C3-D0-DC-F7-11-27-76-72-E4">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</FullName>
+      <ModuleName>System</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="84-F1-9D-D4-80-FD-FD-4B-FB-C9-D7-F5-29-8A-8C-DF-3F-AE-C3-5C">
+      <FullName>C:\Users\Hugh\Documents\GitHub\version-checker\src\tests\bin\debug\VersionChecker.Tests.dll</FullName>
+      <ModuleName>VersionChecker.Tests</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="2C-BE-1B-C3-02-35-ED-A0-CC-7C-AB-BA-F1-C5-8D-DE-79-03-01-9A">
+      <FullName>C:\Users\Hugh\Documents\GitHub\version-checker\src\tests\bin\debug\xunit.runner.utility.desktop.dll</FullName>
+      <ModuleName>xunit.runner.utility.desktop</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="9F-06-B1-CA-CB-A0-C1-4D-45-F5-AA-8F-72-C0-DF-0F-F4-EF-29-CF">
+      <FullName>C:\Users\Hugh\Documents\GitHub\version-checker\src\tests\bin\debug\xunit.core.dll</FullName>
+      <ModuleName>xunit.core</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="F2-AE-6A-FF-6D-90-B0-2D-DC-74-AD-F8-5A-48-B4-35-01-4D-5B-36">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</FullName>
+      <ModuleName>System.Core</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="1F-2F-2D-5B-16-A3-3A-9D-99-24-28-D0-A0-B4-69-05-64-28-01-2D">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Runtime\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Runtime.dll</FullName>
+      <ModuleName>System.Runtime</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="A7-06-80-CE-AE-CC-2A-FF-BD-A0-4E-05-3B-BB-B3-6E-A0-21-FE-7F">
+      <FullName>C:\Users\Hugh\Documents\GitHub\version-checker\src\tests\bin\debug\Xml.Net.dll</FullName>
+      <ModuleName>Xml.Net</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="D9-F6-51-0E-2B-76-76-18-50-82-E7-9C-93-F5-9C-50-0B-34-0A-EE">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Threading.Tasks\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Threading.Tasks.dll</FullName>
+      <ModuleName>System.Threading.Tasks</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="F9-E7-A7-48-E8-0E-E1-27-DA-CE-FD-D3-CB-42-8C-E9-92-1A-D0-C8">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Collections\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Collections.dll</FullName>
+      <ModuleName>System.Collections</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="07-45-D5-E5-64-A5-50-1F-70-A0-AC-85-75-89-96-B5-69-A5-81-0F">
+      <FullName>C:\Users\Hugh\Documents\GitHub\version-checker\src\tests\bin\debug\xunit.assert.dll</FullName>
+      <ModuleName>xunit.assert</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="CC-3B-6B-8D-75-E2-02-1A-C5-41-B6-EE-27-7F-11-D8-E2-DD-96-35">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Linq\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Linq.dll</FullName>
+      <ModuleName>System.Linq</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="BC-E7-A1-CB-53-F2-8B-70-A3-AF-F6-77-E3-8F-51-A7-98-F5-7F-55">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll</FullName>
+      <ModuleName>System.Xml.Linq</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="6A-7F-8A-5C-DA-B6-D2-F2-03-3A-49-AB-0E-60-60-67-BA-38-A7-57">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Net.Http\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Net.Http.dll</FullName>
+      <ModuleName>System.Net.Http</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="75-21-73-F7-19-DB-C9-14-68-D8-F2-4C-82-EF-EA-8D-7F-C1-16-47">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll</FullName>
+      <ModuleName>System.Xml</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="35-E9-46-2A-74-7E-97-F3-30-6A-54-64-87-BC-30-0C-76-42-05-6B">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll</FullName>
+      <ModuleName>System.Configuration</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="3A-0D-E2-CB-45-D4-09-DA-DA-8C-C1-76-B3-B7-D7-09-A6-05-66-26">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Reflection\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Reflection.dll</FullName>
+      <ModuleName>System.Reflection</ModuleName>
+      <Classes />
+    </Module>
+  </Modules>
+</CoverageSession>

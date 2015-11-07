@@ -1,36 +1,13 @@
+set "open_cover=src\packages\OpenCover.4.6.166\tools\OpenCover.Console.exe"
+set "report_generator=src\packages\ReportGenerator.2.3.4.0\tools\ReportGenerator.exe"
 
-set "test_utils_path=C:\Users\Hugh\Documents\Jenkins-Addons"
+set "xunit=src\packages\xunit.runner.console.2.1.0\tools\xunit.console.exe"
 
-set "target_directory_relative_path=\VersionChecker\tests\bin\Debug"
-set "test_relative_path=\VersionCheckerTests.dll"
-set "source_relative_path=\VersionChecker\src\VersionChecker"
+set "test_name=src\tests\bin\debug\VersionChecker.Tests.dll"
 
-set "current_path=%cd%"
-set "target_directory=%current_path%%target_directory_relative_path%"
-set "tests_full_path=%target_directory%%test_relative_path%"
-set "source_full_path=%current_path%%source_relative_path%"
+set "report_name=coverage.xml"
+set "report_path=resources\coverage"
 
-set "xunit_path=%test_utils_path%\xUnit\xunit.console.exe"
-set "opencover_path=%test_utils_path%\OpenCover\"
+%open_cover% -register:user -output:"%report_name%" -filter:"+[VersionChecker*]* -[VersionChecker.Tests]*" -target:"%xunit%" -targetargs:"%test_name% -noshadow"
 
-set "converter_path=%test_utils_path%\ReportConverter\"
-set "generator_path=%test_utils_path%\ReportGenerator\"
-
-set "xunit_coverage_path=%current_path%\coverage.xunit.xml"
-set "cobertura_coverage_path=%current_path%\coverage.cobertura.xml"
-
-set "bin_path=%test_utils_path%\Bin\"
-
-cd %opencover_path%
-
-opencover.console.exe -register:user -output:"%xunit_coverage_path%" -target:"%xunit_path%" -targetdir:"%target_directory%" -targetargs:"%tests_full_path%" -filter:"+[*]VersionChecker.* -[VersionChecker.Tests]*" -hideskipped:Filter
-
-cd %converter_path%
-
-OpenCoverToCoberturaConverter.exe -input:"%xunit_coverage_path%" -output:"%cobertura_coverage_path%" -sources:"%source_full_path%"
-
-cd %generator_path%
-
-ReportGenerator.exe -reports:"%xunit_coverage_path%" -targetDir:"%bin_path%"
-
-cd %current_path%
+%report_generator% -reports:"%report_name%" -targetdir:"%report_path%"
