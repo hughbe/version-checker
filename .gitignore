@@ -2,7 +2,7 @@ syntax: glob
 
 ### Tests ###
 coverage.xml
-resources/coverage
+resources/coverage/
 
 ### VisualStudio ###
 
