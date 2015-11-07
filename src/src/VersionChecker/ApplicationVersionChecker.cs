@@ -40,12 +40,9 @@ namespace VersionChecker
             LatestVersionName = "latestversion";
         }
         
-        public bool HasUpdatedLatestVersion { get; set; }
         public async Task<ApplicationVersion> GetLatestVersion()
         {
-            var latestVersion = await GetVersion(LatestVersionName);
-            HasUpdatedLatestVersion = true;
-            return latestVersion;
+            return await GetVersion(LatestVersionName);
         }
         
         public async Task<ApplicationVersion> GetVersion(string versionId)
@@ -61,11 +58,7 @@ namespace VersionChecker
 
         public async Task<bool> IsUpToDate()
         {
-            if (!HasUpdatedLatestVersion) 
-            {
-                LatestVersion = await Task.Run(GetLatestVersion);
-            }
-
+            LatestVersion = await GetLatestVersion();
             return LatestVersion.Equals(CurrentVersion);
         }
     }

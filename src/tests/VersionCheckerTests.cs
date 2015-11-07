@@ -58,22 +58,22 @@ namespace VersionChecker.Tests
         }
 
         [Fact]
-        public async Task Get_Current_Version_Test()
+        public void Get_Current_Version_Test()
         {
             var versionChecker = OnlineCurrentVersionChecker();
             
-            var version = await versionChecker.GetVersion("latestversion");
+            var version = versionChecker.GetVersion("latestversion").Result;
             Assert.Equal(version, OnlineCurrentVersion);
 
             Assert.True(versionChecker.IsUpToDate().Result);
         }
 
         [Fact]
-        public async Task Update_Latest_Version()
+        public void Update_Latest_Version()
         {
             var versionChecker = OnlineCurrentVersionChecker();
 
-            var latestVersion = await versionChecker.GetLatestVersion();
+            var latestVersion = versionChecker.GetLatestVersion().Result;
             Assert.Equal(latestVersion, OnlineCurrentVersion);
         }
 
