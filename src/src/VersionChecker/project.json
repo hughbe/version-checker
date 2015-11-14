@@ -48,8 +48,5 @@
                 "Xml.Net": "1.0.4"
             }
         }
-    },
-    "dependencies": {
-        "dnx-coreclr-win-x86": "1.0.0-beta8"
     }
 }
