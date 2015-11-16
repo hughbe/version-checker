@@ -11,3 +11,5 @@ set "report_path=resources\coverage"
 %open_cover% -register:user -output:"%report_name%" -filter:"+[VersionChecker*]* -[VersionChecker.Tests]*" -target:"%xunit%" -targetargs:"%test_name% -noshadow"
 
 %report_generator% -reports:"%report_name%" -targetdir:"%report_path%"
+
+PAUSE

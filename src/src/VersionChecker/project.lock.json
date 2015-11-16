@@ -11,6 +11,15 @@
           "ref/dotnet/System.Collections.dll": {}
         }
       },
+      "System.Console/4.0.0-beta-23409": {
+        "dependencies": {
+          "System.Runtime": "4.0.0",
+          "System.IO": "4.0.0"
+        },
+        "compile": {
+          "ref/dotnet/System.Console.dll": {}
+        }
+      },
       "System.Diagnostics.Debug/4.0.10": {
         "dependencies": {
           "System.Runtime": "4.0.0"
@@ -269,8 +278,9 @@
           "lib/dotnet/System.Xml.XDocument.dll": {}
         }
       },
-      "Xml.Net/1.0.4": {
+      "Xml.Net/1.0.5": {
         "dependencies": {
+          "System.Console": "4.0.0-beta-23409",
           "System.Collections": "4.0.11-beta-23409",
           "System.Linq": "4.0.1-beta-23409",
           "System.Threading": "4.0.11-beta-23409",
@@ -334,7 +344,7 @@
       "System.Text.Encoding/4.0.0": {},
       "System.Threading/4.0.11-beta-23409": {},
       "System.Threading.Tasks/4.0.0": {},
-      "Xml.Net/1.0.4": {
+      "Xml.Net/1.0.5": {
         "frameworkAssemblies": [
           "System.Xml",
           "System.Xml.Linq",
@@ -352,7 +362,7 @@
       }
     },
     "DNX,Version=v4.5.1": {
-      "Xml.Net/1.0.4": {
+      "Xml.Net/1.0.5": {
         "frameworkAssemblies": [
           "System.Xml",
           "System.Xml.Linq",
@@ -370,7 +380,7 @@
       }
     },
     ".NETFramework,Version=v4.5": {
-      "Xml.Net/1.0.4": {
+      "Xml.Net/1.0.5": {
         "frameworkAssemblies": [
           "System.Xml",
           "System.Xml.Linq",
@@ -440,6 +450,27 @@
         "runtimes/win8-aot/lib/netcore50/ru/System.Collections.xml",
         "runtimes/win8-aot/lib/netcore50/zh-hans/System.Collections.xml",
         "runtimes/win8-aot/lib/netcore50/zh-hant/System.Collections.xml"
+      ]
+    },
+    "System.Console/4.0.0-beta-23409": {
+      "serviceable": true,
+      "sha512": "vVstiHq9NKm6jfqm2OQGYgEinU4Zrwbcjtfxq61v0xHXVhx8p3igw9XQCdCOILf1ZWsZtKcvdbcazNP7tL+u+g==",
+      "files": [
+        "runtime.json",
+        "System.Console.4.0.0-beta-23409.nupkg",
+        "System.Console.4.0.0-beta-23409.nupkg.sha512",
+        "System.Console.nuspec",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Console.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "ref/dotnet/System.Console.dll",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Console.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._"
       ]
     },
     "System.Diagnostics.Debug/4.0.10": {
@@ -1346,11 +1377,11 @@
         "ref/xamarinmac20/_._"
       ]
     },
-    "Xml.Net/1.0.4": {
-      "sha512": "sor/n3gBkYAEuiRZkPn4DlSqlVatCs2OxpBNyqjB0AXu0Tzf1O5ptynKieiuy8OE6KDXp1PbNxJad2ufxT4j+g==",
+    "Xml.Net/1.0.5": {
+      "sha512": "KL00PUBdnlNRsEdhh3gVz7YfoxX1KUKbmnl9EPfoLyh5dosv5Bd2PQqPEx0fAtaX5g1sTXwSSS1jcMw3zkKe0w==",
       "files": [
-        "Xml.Net.1.0.4.nupkg",
-        "Xml.Net.1.0.4.nupkg.sha512",
+        "Xml.Net.1.0.5.nupkg",
+        "Xml.Net.1.0.5.nupkg.sha512",
         "Xml.Net.nuspec",
         "lib/aspnet50/Xml.Net.dll",
         "lib/aspnet50/Xml.Net.xml",
@@ -1368,9 +1399,10 @@
     }
   },
   "projectFileDependencyGroups": {
-    "": [],
+    "": [
+      "Xml.Net >= 1.0.5"
+    ],
     ".NETPlatform,Version=v5.0": [
-      "Xml.Net >= 1.0.4",
       "System.Collections >= 4.0.11-beta-*",
       "System.Linq >= 4.0.1-beta-*",
       "System.Threading >= 4.0.11-beta-*",
@@ -1379,7 +1411,6 @@
       "System.Net.Http >= 4.0.1-beta-*"
     ],
     "Asp.Net,Version=v5.0": [
-      "Xml.Net >= 1.0.4",
       "System.Collections >= 4.0.11-beta-*",
       "System.Linq >= 4.0.1-beta-*",
       "System.Threading >= 4.0.11-beta-*",
@@ -1388,11 +1419,9 @@
       "System.Net.Http >= 4.0.1-beta-*"
     ],
     "DNX,Version=v4.5.1": [
-      "Xml.Net >= 1.0.4",
       "fx/System.Net.Http >= 4.0.0.0"
     ],
     ".NETFramework,Version=v4.5": [
-      "Xml.Net >= 1.0.4",
       "fx/System.Net.Http >= 4.0.0.0"
     ]
   }

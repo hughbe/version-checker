@@ -28,10 +28,10 @@ namespace VersionChecker.Tests
         [Fact]
         public void Invalid_Constructor_Test()
         {
-            Assert.Throws<ArgumentNullException>(() => new ApplicationVersionChecker(null, OnlineCurrentVersion));
-            Assert.Throws<ArgumentException>(() => new ApplicationVersionChecker("", OnlineCurrentVersion));
+            Assert.Throws<ArgumentNullException>("versionsLocation", () => new ApplicationVersionChecker(null, OnlineCurrentVersion)); //Versions location is null
+            Assert.Throws<ArgumentNullException>("currentVersion", () => new ApplicationVersionChecker(VersionsLocation, null)); //Current version is null
 
-            Assert.Throws<ArgumentNullException>(() => new ApplicationVersionChecker(VersionsLocation, null));
+            Assert.Throws<ArgumentException>("versionsLocation", () => new ApplicationVersionChecker("", OnlineCurrentVersion)); //Versions location is empty
         }
         
         [Theory]
@@ -53,8 +53,8 @@ namespace VersionChecker.Tests
         {
             var versionChecker = OnlineCurrentVersionChecker();
 
-            Assert.Throws<ArgumentNullException>(() => versionChecker.LatestVersionName = null);
-            Assert.Throws<ArgumentException>(() => versionChecker.LatestVersionName = "");
+            Assert.Throws<ArgumentNullException>("value", () => versionChecker.LatestVersionName = null); //Value is null
+            Assert.Throws<ArgumentException>("value", () => versionChecker.LatestVersionName = ""); //Value is empty
         }
 
         [Fact]
@@ -82,8 +82,8 @@ namespace VersionChecker.Tests
         {
             var versionChecker = new ApplicationVersionChecker(VersionsLocation, OnlineCurrentVersion);
 
-            await Assert.ThrowsAsync<ArgumentNullException>(() => versionChecker.GetVersion(null));
-            await Assert.ThrowsAsync<ArgumentException>(() => versionChecker.GetVersion(""));
+            await Assert.ThrowsAsync<ArgumentNullException>("versionId", () => versionChecker.GetVersion(null)); //Version id is null
+            await Assert.ThrowsAsync<ArgumentException>("versionId", () => versionChecker.GetVersion("")); //Version id is empty
         }
 
         [Theory]

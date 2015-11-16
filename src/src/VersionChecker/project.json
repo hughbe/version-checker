@@ -1,52 +1,48 @@
 {
-    "version": "1.0.2",
-    "title": "VersionChecker",
-    "description": "A simple but powerful library that simplifies version checking on the .Net platform",
-    "summary": "A simple but powerful library that simplifies version checking on the .Net platform",
-    "authors": [ "Hugh Bellamy" ],
-    "tags": [ "version version-checker versioning" ],
-    "copyright": "Hugh Bellamy 2015",
-    "projectUrl": "https://github.com/hughbe/version-checker",
-    "licenseUrl": "https://github.com/hughbe/version-checker/blob/master/LICENSE",
+  "version": "1.0.2",
+  "title": "VersionChecker",
+  "description": "A simple but powerful library that simplifies version checking on the .Net platform",
+  "summary": "A simple but powerful library that simplifies version checking on the .Net platform",
+  "authors": [ "Hugh Bellamy" ],
+  "tags": [ "version version-checker versioning" ],
+  "copyright": "Hugh Bellamy 2015",
+  "projectUrl": "https://github.com/hughbe/version-checker",
+  "licenseUrl": "https://github.com/hughbe/version-checker/blob/master/LICENSE",
 
-    "frameworks": {
-        "dotnet": {
-            "dependencies": {
-                "Xml.Net": "1.0.4",
-                "System.Collections": "4.0.11-beta-*",
-                "System.Linq": "4.0.1-beta-*",
-                "System.Threading": "4.0.11-beta-*",
-                "System.Runtime": "4.0.21-beta-*",
-                "System.IO.FileSystem": "4.0.1-beta-*",
-                "System.Net.Http": "4.0.1-beta-*"
-            }
-        },
-        "aspnet50": {
-            "dependencies": {
-                "Xml.Net": "1.0.4",
-                "System.Collections": "4.0.11-beta-*",
-                "System.Linq": "4.0.1-beta-*",
-                "System.Threading": "4.0.11-beta-*",
-                "System.Runtime": "4.0.21-beta-*",
-                "System.IO.FileSystem": "4.0.1-beta-*",
-                "System.Net.Http": "4.0.1-beta-*"
-            }
-        },
-        "dnx451": {
-            "frameworkAssemblies": {
-                "System.Net.Http": "4.0.0.0"
-            },
-            "dependencies": {
-                "Xml.Net": "1.0.4"
-            }
-        },
-        "net45": {
-            "frameworkAssemblies": {
-                "System.Net.Http": "4.0.0.0"
-            },
-            "dependencies": {
-                "Xml.Net": "1.0.4"
-            }
-        }
-    }
+  "dependencies": {
+    "Xml.Net": "1.0.5"
+  },
+
+  "frameworks": {
+      "dotnet": {
+          "dependencies": {
+              "System.Collections": "4.0.11-beta-*",
+              "System.Linq": "4.0.1-beta-*",
+              "System.Threading": "4.0.11-beta-*",
+              "System.Runtime": "4.0.21-beta-*",
+              "System.IO.FileSystem": "4.0.1-beta-*",
+              "System.Net.Http": "4.0.1-beta-*"
+          }
+      },
+      "aspnet50": {
+          "dependencies": {
+              "System.Collections": "4.0.11-beta-*",
+              "System.Linq": "4.0.1-beta-*",
+              "System.Threading": "4.0.11-beta-*",
+              "System.Runtime": "4.0.21-beta-*",
+              "System.IO.FileSystem": "4.0.1-beta-*",
+              "System.Net.Http": "4.0.1-beta-*"
+          }
+      },
+      "dnx451": {
+          "frameworkAssemblies": {
+              "System.Net.Http": "4.0.0.0"
+          }
+      },
+      "net45": {
+          "frameworkAssemblies": {
+              "System.Net.Http": "4.0.0.0"
+          }
+      }
+  }
 }

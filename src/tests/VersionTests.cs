@@ -66,8 +66,8 @@ namespace VersionChecker.Tests
         [Fact]
         public void Version_Constructor_Test_3()
         {
-            Assert.Throws<ArgumentNullException>(() => new ApplicationVersion(null));
-            Assert.Throws<ArgumentException>(() => new ApplicationVersion(""));
+            Assert.Throws<ArgumentNullException>("id", () => new ApplicationVersion(null));
+            Assert.Throws<ArgumentException>("id", () => new ApplicationVersion(""));
         }
 
         [Theory]
@@ -121,7 +121,7 @@ namespace VersionChecker.Tests
         [Fact]
         public void Version_Id_Serialization_Error_Test()
         {
-            Assert.Throws<ArgumentNullException>(() => ApplicationVersion.FromXml(null));
+            Assert.Throws<ArgumentNullException>("xml", () => ApplicationVersion.FromXml(null));
 
             Assert.Throws<XmlException>(() => ApplicationVersion.FromXml(""));
             Assert.Throws<XmlException>(() => ApplicationVersion.FromXml("aasdsdasads"));
@@ -355,11 +355,11 @@ namespace VersionChecker.Tests
         [Fact]
         public void Version_Url_Invalid_Constructor_Test()
         {
-            Assert.Throws<ArgumentNullException>(() => new VersionUrl(null, "Url"));
-            Assert.Throws<ArgumentException>(() => new VersionUrl("Title", ""));
+            Assert.Throws<ArgumentNullException>("title", () => new VersionUrl(null, "Url")); //Title is null
+            Assert.Throws<ArgumentNullException>("url", () => new VersionUrl("Title", null)); //Url is null
 
-            Assert.Throws<ArgumentNullException>(() => new VersionUrl("Title", null));
-            Assert.Throws<ArgumentException>(() => new VersionUrl("", "Url"));
+            Assert.Throws<ArgumentException>("title", () => new VersionUrl("", "Url")); //Title is empty
+            Assert.Throws<ArgumentException>("url", () => new VersionUrl("Title", "")); //Url is empty
         }
 
         [Fact]
@@ -395,11 +395,11 @@ namespace VersionChecker.Tests
         [Fact]
         public void Version_Note_Invalid_Constructor_Test()
         {
-            Assert.Throws<ArgumentNullException>(() => new VersionNote(null, "Content"));
-            Assert.Throws<ArgumentException>(() => new VersionNote("Title", ""));
+            Assert.Throws<ArgumentNullException>("title", () => new VersionNote(null, "Content")); //Title is null
+            Assert.Throws<ArgumentNullException>("content", () => new VersionNote("Title", null)); //Content is null
 
-            Assert.Throws<ArgumentNullException>(() => new VersionNote("Title", null));
-            Assert.Throws<ArgumentException>(() => new VersionNote("", "Content"));
+            Assert.Throws<ArgumentException>("title", () => new VersionNote("", "Content")); //Title is empty
+            Assert.Throws<ArgumentException>("content", () => new VersionNote("Title", "")); //Content is empty
         }
 
         [Fact]

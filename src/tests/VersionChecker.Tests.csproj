@@ -39,9 +39,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="VersionChecker">
-      <HintPath>.\VersionChecker.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="VersionChecker, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\artifacts\bin\VersionChecker\Debug\net45\VersionChecker.dll</HintPath>
     </Reference>
     <Reference Include="Xml.Net, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Xml.Net.1.0.4\lib\net45\Xml.Net.dll</HintPath>
@@ -83,10 +83,8 @@
     <Error Condition="!Exists('..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props'))" />
   </Target>
   <PropertyGroup>
-    <PreBuildEvent>copy "$(SolutionDir)artifacts\bin\VersionChecker\Debug\net45\VersionChecker.dll" "$(ProjectDir)VersionChecker.dll"
-copy "$(SolutionDir)artifacts\bin\VersionChecker\Debug\net45\VersionChecker.pdb" "$(ProjectDir)VersionChecker.pdb"
-copy "$(SolutionDir)artifacts\bin\VersionChecker\Debug\net45\VersionChecker.xml" "$(ProjectDir)VersionChecker.xml"
-</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
