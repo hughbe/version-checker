@@ -2492,7 +2492,7 @@
           "lib/netstandard1.1/xunit.runner.utility.dotnet.dll": {}
         }
       },
-      "VersionChecker/1.0.3": {
+      "VersionChecker/1.1.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v1.1",
         "dependencies": {
@@ -2914,7 +2914,7 @@
           "lib/net45/xunit.runner.utility.desktop.dll": {}
         }
       },
-      "VersionChecker/1.0.3": {
+      "VersionChecker/1.1.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.5.1",
         "dependencies": {
@@ -7952,7 +7952,7 @@
         "xunit.runner.utility.nuspec"
       ]
     },
-    "VersionChecker/1.0.3": {
+    "VersionChecker/1.1.0": {
       "type": "project",
       "path": "../VersionChecker/project.json",
       "msbuildProject": "../VersionChecker/VersionChecker.xproj"
@@ -7960,7 +7960,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "VersionChecker >= 1.0.3",
+      "VersionChecker >= 1.1.0",
       "Xml.Net >= 1.0.6",
       "dotnet-test-xunit >= 2.2.0-preview2-build1029",
       "xunit >= 2.2.0-beta2-build3300"

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text.RegularExpressions;
 using Xml.Net;
@@ -8,15 +9,13 @@ namespace VersionChecker
     [XmlConvertCustomElement("Version")]
     public class ApplicationVersion : IEquatable<ApplicationVersion>
     {
-        public ApplicationVersion()
-        {
-        }
+        public ApplicationVersion() { }
 
         public ApplicationVersion(string id) : this(id, null, null,DateTime.MinValue, null, null, null)
         {
         }
 
-        public ApplicationVersion(string id, string shortDescription, string longDescription, DateTime date, Collection<VersionNote> notes, Collection<VersionUrl> urls, string copyright)
+        public ApplicationVersion(string id, string shortDescription, string longDescription, DateTime date, IEnumerable<VersionNote> notes, IEnumerable<VersionUrl> urls, string copyright)
         {
             Utilities.CheckStringParam(id, "The version id cannot be empty", nameof(id));
 
@@ -27,8 +26,14 @@ namespace VersionChecker
 
             Date = date;
 
-            Notes = notes;
-            Urls = urls;
+			if (notes != null)
+			{
+				Notes = new List<VersionNote>(notes);
+			}
+			if (urls != null)
+			{
+				Urls = new List<VersionUrl>(urls);
+			}
 
             Copyright = copyright;
         }
@@ -40,8 +45,8 @@ namespace VersionChecker
 
         public DateTime Date { get; set; }
 
-        public Collection<VersionNote> Notes { get; set; }
-        public Collection<VersionUrl> Urls { get; set; }
+        public List<VersionNote> Notes { get; set; }
+        public List<VersionUrl> Urls { get; set; }
 
         public string Copyright { get; set; }
 
