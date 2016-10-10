@@ -1,8 +1,6 @@
-{
-    "projects": [ "src", "test" ],
-    "sdk": {
-        "version": "1.0.0-beta5",
-        "runtime": "clr",
-        "architecture": "x64"
-    }
+﻿{
+  "projects": [ "src", "test" ],
+  "sdk": {
+    "version": "1.0.0-preview2-003131"
+  }
 }
