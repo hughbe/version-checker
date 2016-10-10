@@ -1,4 +1,6 @@
 # Version Checker
+[![Build status](https://ci.appveyor.com/api/projects/status/fuertbgiraew3ee4/branch/master?svg=true)](https://ci.appveyor.com/project/hughbe/version-checker/branch/master)[![Travis Build Status](https://travis-ci.org/hughbe/version-checker.svg?branch=master)](https://travis-ci.org/hughbe/version-checker)
+
 A drop-in C# library that simplifies version checking for applications of all types.
 
 ![alt text](https://github.com/hughbe/version-checker/blob/master/resources/screenshots/1.png "Screenshot 1")

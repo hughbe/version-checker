@@ -1,0 +1,26 @@
+os: Visual Studio 2015
+configuration: Release
+
+environment:
+  matrix:
+    - FRAMEWORK: net451
+      LIBFRAMEWORK: net451
+    - FRAMEWORK: netcoreapp1
+      LIBFRAMEWORK: netstandard1.1
+
+before_build:
+  - dotnet --info
+  - dotnet restore
+
+build_script:
+  - ps: dotnet build -c Release -f $env:LIBFRAMEWORK src/VersionChecker.
+  - ps: dotnet build -c Release -f $env:FRAMEWORK src/VersionChecker.Tests
+
+test_script:
+  - ps: dotnet test src/VersionChecker.Tests/project.json -c Release -f $env:Framework
+
+after_test:
+  - ps: dotnet pack -c Release src/VersionChecker
+
+artifacts:
+  path: 'src/VersionChecker/bin/Release/*.nupkg'

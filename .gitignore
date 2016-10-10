@@ -1,9 +1,3 @@
-syntax: glob
-
-### Tests ###
-coverage.xml
-resources/coverage/
-
 ### VisualStudio ###
 
 # User-specific files
@@ -39,6 +33,8 @@ msbuild.log
 #NUNIT
 *.VisualState.xml
 TestResult.xml
+coverage.xml
+resources/coverage/
 
 # Build Results of an ATL Project
 [Dd]ebugPS/
